@@ -7,7 +7,8 @@ const Champions = require('../models/champion')(db, DataTypes)
 // Get champion list
 router.get('/', async (req, res) => {
   try {
-    console.log('champions reached')
+    const champions = await Champions.findAll()
+    res.json(champions)
   } catch (err) {
     console.log('err', err)
   }
