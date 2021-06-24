@@ -16,7 +16,14 @@ router.get('/', async (req, res) => {
 
 // Get one champion
 router.get('/:id', async (req, res) => {
-  console.log('can reach one')
+  try {
+    const { id } = req.params
+    const champion = await Champions.findOne({ where: { id } })
+
+    res.json(champion)
+  } catch (err) {
+    console.log(err)
+  }
 })
 
 // Add a like to the selected champion 
