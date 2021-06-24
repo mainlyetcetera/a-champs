@@ -4,6 +4,8 @@
   "description": "A list of the a-tier LoL champs...",
   "main": "app.js",
   "scripts": {
+    "start_db": "npx sequelize-cli db:create",
+    "drop_db": "npx sequelize-cli db:drop",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
