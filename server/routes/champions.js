@@ -15,6 +15,10 @@ router.get('/', async (req, res) => {
 })
 
 // Get one champion
+router.get('/:id', async (req, res) => {
+  console.log('can reach one')
+})
+
 // Add a like to the selected champion 
 
 module.exports = router
