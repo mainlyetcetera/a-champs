@@ -1,0 +1,11 @@
+{
+  "name": "a_champs",
+  "version": "1.0.0",
+  "description": "A list of the a-tier LoL champs...",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Campbell",
+  "license": "MIT"
+}
