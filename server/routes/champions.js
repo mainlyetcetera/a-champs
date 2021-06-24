@@ -27,5 +27,9 @@ router.get('/:id', async (req, res) => {
 })
 
 // Add a like to the selected champion 
+router.put('/:id', async (req, res) => {
+  console.log('reach id-based put')
+  res.send('id-based put reached')
+})
 
 module.exports = router
