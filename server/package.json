@@ -9,6 +9,9 @@
     "make-model": "npx sequelize-cli model:generate --name Champion --attributes title:string,description:string,image:string,price:float,likes:integer",
     "migrate": "npx sequelize-cli db:migrate",
     "un-migrate": "npx sequelize-cli db:migrate:undo",
+    "make-seed": "npx sequelize-cli seed:generate --name demo-product",
+    "run-seed": "npx sequelize-cli db:seed:all",
+    "remove-seed": "npx sequelize-cli db:seed:undo",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
