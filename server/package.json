@@ -6,6 +6,7 @@
   "scripts": {
     "start_db": "npx sequelize-cli db:create",
     "drop_db": "npx sequelize-cli db:drop",
+    "make-model": "npx sequelize-cli model:generate --name Champion --attributes title:string,description:string,image:string,price:float,likes:integer",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
