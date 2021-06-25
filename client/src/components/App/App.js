@@ -3,11 +3,9 @@ import { Route, Link } from 'react-router-dom'
 import Header from '../Header/Header'
 import Champions from '../Champions/Champions'
 import IndivChamp from '../IndivChamp/IndivChamp'
-import { fetchData } from '../../api/api'
 import './App.css'
 
 function App() {
-  const [overallChampions, setOverallChampions] = useState([])
   const [currChamp, setCurrChamp] = useState(null)
 
   return (
@@ -18,7 +16,6 @@ function App() {
         render={() => (
           <>
             <Champions
-              setOverallChampions={setOverallChampions}
               setCurrChamp={setCurrChamp}
             />
           </>
@@ -27,9 +24,8 @@ function App() {
       <Route
         exact path='/champions/:id'
         render={({ match }) => {
-          const { id, title, description, image, price, likes, setCurrChamp }
+          const { id, title, description, image, price, likes }
             = currChamp
-          console.log('curr', currChamp)
           return (
             <IndivChamp
               id={id}
