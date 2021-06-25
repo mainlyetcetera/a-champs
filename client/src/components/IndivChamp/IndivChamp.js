@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { handleLike } from '../../api/api'
 
 function IndivChamp({ id, title, description, image, price, likes }) {
-  // button returning to champs, removing curr
   const [currLike, setCurrLike] = useState(likes)
   const [disable, setDisable] = useState(false)
+  const history = useHistory()
 
   async function handleLikeClick() {
     const url = `http://localhost:5000/champions/${id}`
@@ -26,6 +27,13 @@ function IndivChamp({ id, title, description, image, price, likes }) {
         disabled={disable}
       >
         Like!
+      </button>
+      <button
+        onClick={e => {
+          e.preventDefault()
+          history.goBack()
+        }}
+      >Back
       </button>
     </article>
   )
