@@ -7,13 +7,9 @@ function Champions() {
 
   useEffect(() => {
     async function fetchChampions() {
-      fetch('http://localhost:5000/champions')
-      .then(res => res.json())
-      .then(data => {
-        console.log('data now', data)
-        setChampions(data)
-      })
-      .catch(err => console.log(err))
+      const url = 'http://localhost:5000/champions'
+      const data = await fetchData(url)
+      setChampions(data)
     }
 
     fetchChampions()
