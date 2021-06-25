@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Champion from '../Champion/Champion'
 import fetchData from '../../api/api'
 
 function Champions() {
@@ -15,15 +16,25 @@ function Champions() {
     fetchChampions()
   }, [])
 
-  function getNames() {
-    return champions.map(champion => (
-      <h3>{champion.title}</h3>
-    ))
+  function getChampions() {
+    return champions.map(champion => {
+      const { id, title, description, image, price, likes } = champion
+      return (
+        <Champion
+          key={id}
+          title={title}
+          description={description}
+          image={image}
+          price={price}
+          likes={likes}
+        />
+      )
+    })
   }
 
   return (
     <>
-      {getNames()}
+      {getChampions()}
       <Link to='/'>Go back</Link>
     </>
   )
