@@ -27,7 +27,8 @@ function App() {
       <Route
         exact path='/champions/:id'
         render={({ match }) => {
-          const { id, title, description, image, price, likes } = currChamp
+          const { id, title, description, image, price, likes, setCurrChamp }
+            = currChamp
           return (
             <Champion
               id={id}
@@ -36,6 +37,8 @@ function App() {
               image={image}
               price={price}
               likes={likes}
+              setCurrChamp={setCurrChamp}
+              path={match.path}
             >
             </Champion>
           )
