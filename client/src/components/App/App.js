@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Route, Link } from 'react-router-dom'
 import Header from '../Header/Header'
 import Champions from '../Champions/Champions'
-import Champion from '../Champion/Champion'
+import IndivChamp from '../IndivChamp/IndivChamp'
 import fetchData from '../../api/api'
 import './App.css'
 
@@ -29,8 +29,9 @@ function App() {
         render={({ match }) => {
           const { id, title, description, image, price, likes, setCurrChamp }
             = currChamp
+          console.log('curr', currChamp)
           return (
-            <Champion
+            <IndivChamp
               id={id}
               title={title}
               description={description}
@@ -40,7 +41,7 @@ function App() {
               setCurrChamp={setCurrChamp}
               path={match.path}
             >
-            </Champion>
+            </IndivChamp>
           )
         }}
       />

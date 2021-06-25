@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Champion from '../Champion/Champion'
+import GroupChamp from '../GroupChamp/GroupChamp'
 import fetchData from '../../api/api'
 
 function Champions({ setOverallChampions, setCurrChamp }) {
@@ -15,6 +15,7 @@ function Champions({ setOverallChampions, setCurrChamp }) {
     async function fetchChampions() {
       const url = 'http://localhost:5000/champions'
       const data = await fetchData(url)
+      console.log('data', data)
       assignChampions(data)
     }
 
@@ -25,14 +26,12 @@ function Champions({ setOverallChampions, setCurrChamp }) {
     return champions.map(champion => {
       const { id, title, description, image, price, likes } = champion
       return (
-        <Champion
+        <GroupChamp
           key={id}
           id={id}
           title={title}
-          description={description}
           image={image}
           price={price}
-          likes={likes}
           setCurrChamp={setCurrChamp}
         />
       )
