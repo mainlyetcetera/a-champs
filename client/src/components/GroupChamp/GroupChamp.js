@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import fetchData from '../../api/api'
+import { fetchData } from '../../api/api'
 
 export default function GroupChamp({ id, title, description, image, price, likes, setCurrChamp, path }) {
   // this should be the request to grab the indiv champ, set to currChamp in App? 

@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import Header from '../Header/Header'
 import Champions from '../Champions/Champions'
 import IndivChamp from '../IndivChamp/IndivChamp'
-import fetchData from '../../api/api'
+import { fetchData } from '../../api/api'
 import './App.css'
 
 function App() {

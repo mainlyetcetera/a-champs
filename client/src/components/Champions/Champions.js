@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import GroupChamp from '../GroupChamp/GroupChamp'
-import fetchData from '../../api/api'
+import { fetchData } from '../../api/api'
 
 function Champions({ setOverallChampions, setCurrChamp }) {
   const [champions, setChampions] = useState([])
