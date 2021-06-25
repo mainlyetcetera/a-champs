@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Link } from 'react-router-dom'
 import Header from '../Header/Header'
 import Champions from '../Champions/Champions'
+import Champion from '../Champion/Champion'
+import fetchData from '../../api/api'
 import './App.css'
 
 function App() {
+  const [overallChampions, setOverallChampions] = useState([])
+  const [currChamp, setCurrChamp] = useState(null)
+
   return (
     <div className="App">
       <Header />
@@ -12,9 +17,29 @@ function App() {
         exact path='/champions'
         render={() => (
           <>
-            <Champions />
+            <Champions
+              setOverallChampions={setOverallChampions}
+              setCurrChamp={setCurrChamp}
+            />
           </>
         )}
+      />
+      <Route
+        exact path='/champions/:id'
+        render={({ match }) => {
+          const { id, title, description, image, price, likes } = currChamp
+          return (
+            <Champion
+              id={id}
+              title={title}
+              description={description}
+              image={image}
+              price={price}
+              likes={likes}
+            >
+            </Champion>
+          )
+        }}
       />
       <Route
         exact path='/'
