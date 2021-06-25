@@ -39,10 +39,14 @@ Now you are able to see all the A-tier Champs and like your favorites!
   - needed to play with it to get everything working as intended
 - champions move to the end of the list after they're liked
   - this tells me I can improve my db/server architecture to present me with a properly-sorted list 
+- app does break if I go right to a url with an id
+  - I need to fix this by making the api request through a hard-route to that url
 
 ## Future Iterations:
 - deploy app
 - sort data after a like is incremented
+- install and use `concurrent` in the main directory to start the whole app with one script!
+- fix app breaking when going straight to id url
 
 ### Built With
 
