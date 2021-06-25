@@ -71,12 +71,13 @@ To get a local copy up and running follow these steps.
 3. in `server/config/config.json` and `server/config/database.js` change the PostgreSQL credentials to match what you want to use
   - I defaulted to a username of postgres and no password, database name is a_champs
 *the following should all be run in `server`*
-3. run `npm run start_db` to create the database locally
+7. run `npm run start_db` to create the database locally
 3. run `npm run migrate` to migrate with the model included
 3. run `npm run run-seed` to seed the database with the given dummy data
 3. run `npm run dev` to start the server with `nodemon`; it will update itself with any changes
+
 *now use the terminal tab in `client`* 
-3. run `npm start` to start FE dev server; it will open at `http://localhost:3000`
+12. run `npm start` to start FE dev server; it will open at `http://localhost:3000`
 
 *if something goes wrong somewhere*
 - the `package.json` included with the server has several scripts allowing you to backup a step 
@@ -86,9 +87,9 @@ To get a local copy up and running follow these steps.
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch `git checkout -b feature/AmazingFeature`
+3. Commit your Changes `git commit -m 'Add some AmazingFeature'`
+4. Push to the Branch `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 
 ## Contact
