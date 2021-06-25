@@ -76,8 +76,10 @@ To get a local copy up and running follow these steps.
 3. run `npm run run-seed` to seed the database with the given dummy data
 3. run `npm run dev` to start the server with `nodemon`; it will update itself with any changes
 
+
 *now use the terminal tab in `client`* 
-12. run `npm start` to start FE dev server; it will open at `http://localhost:3000`
+
+11. run `npm start` to start FE dev server; it will open at `http://localhost:3000`
 
 *if something goes wrong somewhere*
 - the `package.json` included with the server has several scripts allowing you to backup a step 
