@@ -20,12 +20,9 @@ function Champions() {
   }, [])
 
   function getNames() {
-    /*
     return champions.map(champion => (
-      <h3>champion.title</h3>
+      <h3>{champion.title}</h3>
     ))
-    */
-    return ['rawr']
   }
 
   return (
