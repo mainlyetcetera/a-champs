@@ -14,4 +14,8 @@ html {
   height: 100vh;
 }
 
-
+a:link,
+a:visited {
+  color: #c8cbcf;
+  text-decoration: none;
+}
