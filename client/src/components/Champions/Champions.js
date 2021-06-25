@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import GroupChamp from '../GroupChamp/GroupChamp'
 import { fetchData } from '../../api/api'
+import './Champions.css'
 
 function Champions({ setCurrChamp }) {
   const [champions, setChampions] = useState([])
@@ -34,7 +35,11 @@ function Champions({ setCurrChamp }) {
 
   return (
     <>
-      {getChampions()}
+      <section
+        className='champions'
+      >
+        {getChampions()}
+      </section>
       <Link to='/'>Go back</Link>
     </>
   )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { handleLike } from '../../api/api'
+import './IndivChamp.css'
 
 function IndivChamp({ id, title, description, image, price, likes }) {
   const [currLike, setCurrLike] = useState(likes)
@@ -15,27 +16,46 @@ function IndivChamp({ id, title, description, image, price, likes }) {
   }
 
   return (
-    <article
+    <section
+      className='indiv-champ'
       style={{ backgroundImage: `url(${image})` }}
     >
-      <h4>{title}</h4>
-      <h4>{description}</h4>
-      <h4>{price}</h4>
-      <h4>{currLike}</h4>
-      <button
-        onClick={() => handleLikeClick()}
-        disabled={disable}
+      <article
+        className='text-container'
       >
-        Like!
+        <h4
+          className='title'
+        >Name: {title}</h4>
+        <h4
+          className='desc'
+        >Description: {description}</h4>
+        <h4
+          className='stats'
+        >Price: {price}</h4>
+        <h4
+          className='stats'
+        >Likes: {currLike}</h4>
+      </article>
+      <article
+        className='btn-container'
+      >
+        <button
+          className='indiv-btn'
+          onClick={() => handleLikeClick()}
+          disabled={disable}
+        >
+          Like!
       </button>
-      <button
-        onClick={e => {
-          e.preventDefault()
-          history.goBack()
-        }}
-      >Back
+        <button
+          className='indiv-btn'
+          onClick={e => {
+            e.preventDefault()
+            history.goBack()
+          }}
+        >Back
       </button>
-    </article>
+      </article>
+    </section>
   )
 }
 

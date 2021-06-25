@@ -1,0 +1,17 @@
+.group-champ {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 55vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 1vh;
+}
+
+.group-champ-text {
+  color: white;
+  font-size: 20px;
+}

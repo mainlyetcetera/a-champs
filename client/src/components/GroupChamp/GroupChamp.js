@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { fetchData } from '../../api/api'
+import './GroupChamp.css'
 
 export default function GroupChamp({ id, title, image, price, setCurrChamp }) {
   const history = useHistory()
@@ -17,6 +18,7 @@ export default function GroupChamp({ id, title, image, price, setCurrChamp }) {
 
   return (
     <button
+      className='group-champ'
       style={{ backgroundImage: `url(${image})` }}
       onClick={async e => {
         e.preventDefault()
@@ -24,8 +26,12 @@ export default function GroupChamp({ id, title, image, price, setCurrChamp }) {
         redirect()
       }}
     >
-      <h4>{title}</h4>
-      <h4>{price}</h4>
+      <h4
+        className='group-champ-text'
+      >{title}</h4>
+      <h4
+        className='group-champ-text'
+      >{price}</h4>
     </button>
   )
 }
